@@ -4,10 +4,10 @@ const client = new Discord.Client({ intents: [Discord.Intents.FLAGS.GUILDS, Disc
 
 var generale = new Discord.MessageEmbed()
 .setColor('#303136')
-.setTitle('Principaux règles de la communauté Straw')
+.setTitle('Principaux règles de la communauté Kaori')
 .setDescription(`・**Soyez convivial, patient et accueillant.**
 Participez à la sécurité de l'environnement et aidez-nous à veiller à ce que tout le monde respecte les présentes Règles.
-・**Soyez respectueux.**
+`💕`・**Soyez respectueux.**
 Nous ne serons pas toujours tous d'accord, mais le désaccord ne justifie pas l'incivilité et les mauvaises manières. Nous sommes tous susceptibles d'éprouver de la frustration de temps à autre, mais nous ne pouvons pas laisser cette frustration se transformer en attaque personnelle. Il est important de garder à l'esprit qu'une communauté dans laquelle les personnes se sentent mal à l'aise ou menacées n'est pas productive.
 ・**Faites attention aux mots que vous employez.**
 Soyez gentil(le) envers les autres. N'insultez pas ou ne dénigrez pas les autres participants. Le harcèlement et autres comportements d'exclusion ne sont pas acceptables.
