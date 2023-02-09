@@ -34,17 +34,17 @@ client.on('messageCreate',  message => {
             .setPlaceholder("🧾 Lire le règlement de la communauté")
             .addOptions([
                 {
-                    label: "1. Règlement",
+                    label: "Règlement",
                   emoji: "",
                     value: "reglement"
                 },
                 {
-                    label: "2. Guide",
+                    label: "Guide",
                   emoji: "",
                     value: "guide"
                 },
               {
-                    label: "3. Donateur",
+                    label: "Donateur",
                 emoji: "",
                     value: "donateur"
                 }
@@ -62,11 +62,12 @@ client.on('messageCreate',  message => {
         	const descregle = new Discord.MessageEmbed()
           .setTitle("")
           .setColor("#303136")
+          .setImage("https://i.imgur.com/RsgSUaa.png")
           .addFields(
 		{ name: 'Présentation', value: `Kaori Café est une communauté francophone qui a pour but de regrouper plusieurs personnes autour d'une communauté amicale, respectueuse & bienfaisante.` },
 		{ name: '\u200B', value: '\u200B' },
-		{ name: '<:coeur_vert:1045930691868774452> Important', value: 'Tout comportement qui sera contre les conditions de notre communauté résultera à un bannissement immédiat et sans appel.', inline: true },
-		{ name: '<coeur_vert_clair:1045930759996833802> Faire un don', value: 'Faites un don à la communauté [ici](https://ko-fi.com/kaorifr) merci en avance', inline: true },
+		{ name: 'Important', value: 'Tout comportement qui sera contre les conditions de notre communauté résultera à un bannissement immédiat et sans appel.', inline: true },
+		{ name: 'Faire un don', value: 'Faites un don à la communauté [ici](https://ko-fi.com/kaorifr) merci en avance.', inline: true },
 	)
 
        		message.channel.send({ embeds: [ regle, descregle ], components: [row]})
