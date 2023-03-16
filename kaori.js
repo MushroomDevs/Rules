@@ -101,7 +101,7 @@ client.on('messageCreate',  message => {
                 }
             ])
 			);
-	if (message.content.toLowerCase().startsWith('.')) {
+	if (message.content.toLowerCase().startsWith('=')) {
 	 	const msg = message.content.slice(1).trim()
       	const args = msg.split(/ +/)
       	const command = args.shift().toLowerCase()
