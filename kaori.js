@@ -92,7 +92,9 @@ client.on('messageCreate',  message => {
       	const command = args.shift().toLowerCase()
 
       	if (command === "rules") {
- 			const regle = new Discord.MessageEmbed()
+   const regle = new Discord.MessageEmbed()
+   .setImage('');
+   const descregle = new Discord.MessageEmbed()
   .setColor('#303136')
   .setTitle('Bienvenue sur Kaori Café')
   .setDescription('Kaori Café est une communauté francophone conviviale et accueillante, où les passionnés de culture japonaise peuvent se retrouver pour discuter, partager et découvrir ensemble.')
