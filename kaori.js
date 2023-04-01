@@ -48,8 +48,7 @@ const guide = new Discord.MessageEmbed()
         { name: 'Utilisation des réactions', value: 'Vous pouvez utiliser les réactions pour exprimer vos sentiments en réponse à un message. Cliquez sur le bouton "+" à côté du message et choisissez la réaction souhaitée.' },
         { name: 'Partager du contenu', value: 'Vous pouvez partager du contenu, comme des images ou des vidéos, en cliquant sur le bouton "Upload" et en sélectionnant le fichier que vous souhaitez partager. Ne partagez pas de contenu inapproprié ou offensant.' },
         { name: 'Signaler un comportement inapproprié', value: 'Si vous rencontrez un comportement inapproprié sur le serveur, contactez un membre du personnel.' },
-    )
-    .setFooter('Contactez un membre du personnel pour toute question.');
+    );
 
 // Vous pouvez maintenant envoyer cet embed dans un canal approprié.
 var guide2 = new Discord.MessageEmbed()
