@@ -3,51 +3,42 @@ const { MessageActionRow, MessageButton } = require('discord.js')
 const client = new Discord.Client({ intents: [Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MESSAGES] });
 
 var reglement = new Discord.MessageEmbed()
-.setColor('#303136')
-.setTitle('Règlement principale de la communauté')
-.setDescription("`1.`Respectez les autres utilisateurs - Tout manque de respect envers les autres utilisateurs, qu'il s'agisse d'insultes, de harcèlement, de diffamation ou de tout autre comportement inapproprié, est strictement interdit.\n\n`2.` Gardez un langage approprié - Veuillez éviter les propos vulgaires, les insultes, les propos haineux ou tout autre langage offensant pour les autres utilisateurs.\n\n`3.` Ne partagez pas de contenu inapproprié - Il est interdit de partager du contenu offensant, pornographique, haineux ou violent.\n\n`4.` Évitez les sujets de controverse - Il est préférable d'éviter les sujets de controverse tels que la politique, la religion, etc. afin de maintenir une atmosphère amicale et positive sur le serveur.\n\n`5.` Pas de spam - Il est interdit de spammer les canaux de discussion avec des messages répétitifs ou non pertinents.\n\n`6.` Respectez les règles du serveur - Veuillez respecter toutes les règles du serveur, y compris les restrictions de canal et les horaires de modération.\n\n`7.` Signalez les violations des règles - Si vous observez une violation des règles du serveur, veuillez le signaler aux modérateurs pour qu'ils puissent prendre les mesures nécessaires.\n\n`8.` Soyez positif et constructif - Encouragez une atmosphère positive et constructrice sur le serveur en faisant preuve de courtoisie, de compréhension et de bienveillance envers les autres utilisateurs.\n\n`9.` Pas de publicités non autorisées - Il est interdit de faire de la publicité pour d'autres serveurs Discord ou pour tout autre produit ou service sans autorisation préalable des modérateurs.\n\n`10.` Évitez les débats houleux - Les débats peuvent être une source d'apprentissage et d'enrichissement, mais il est important de les aborder de manière respectueuse et de ne pas les laisser dégénérer en disputes inutiles.")
-.setImage('https://i.imgur.com/RsgSUaa.png')
+    .setColor('#303136')
+    .setTitle('Règlement principal de la communauté')
+    .setDescription("Ce règlement s'applique à tous les membres de la communauté Discord Kaori. En rejoignant notre serveur, vous acceptez de respecter ces règles. En cas de violation, des mesures disciplinaires peuvent être prises, y compris le bannissement du serveur.")
+    .addField('Règle 1 : Respect des autres membres', 'Tous les membres de la communauté doivent être traités avec respect et politesse. Tout harcèlement, intimidation ou comportement offensant envers les autres membres est interdit.')
+    .addField('Règle 2 : Contenu inapproprié', 'Tout contenu inapproprié est strictement interdit sur le serveur, y compris les images, vidéos, messages ou liens offensants, discriminatoires ou pornographiques.')
+    .addField('Règle 3 : Publicité', 'Toute forme de publicité est interdite sur le serveur, sauf autorisation expresse des administrateurs. Cela inclut la publicité pour d\'autres serveurs Discord, des sites web ou des réseaux sociaux.')
+    .addField('Règle 4 : Langage', 'Le langage offensant, vulgaire ou discriminatoire est interdit sur le serveur. Les insultes et les jurons sont également interdits.')
+    .addField('Règle 5 : Spoilers', 'Les spoilers pour les films, les jeux vidéo, les séries TV ou tout autre contenu sont interdits sur le serveur. Si vous devez discuter de quelque chose qui pourrait être un spoiler, utilisez la fonction de spoiler pour cacher le contenu.')
+    .addField('Règle 6 : Usage abusif de mentions', 'L\'utilisation abusive de mentions est interdite sur le serveur. Les mentions doivent être utilisées de manière appropriée pour les communications importantes.')
+    .addField('Règle 7 : Respect des canaux', 'Les messages doivent être postés dans les canaux appropriés. Le spamming et la dérivation des sujets sont interdits.')
+    .addField('Règle 8 : Langue', 'Le serveur est principalement en français, donc évitez d\'utiliser d\'autres langues sauf si cela est autorisé par les administrateurs.')
+    .addField('Règle 9 : Droit d\'auteur', 'Le contenu protégé par le droit d\'auteur ne doit pas être partagé sans autorisation. Les violations du droit d\'auteur peuvent entraîner des sanctions.')
+    .addField('Règle 10 : Respect des administrateurs', 'Les administrateurs du serveur doivent être respectés en tout temps. Tout comportement irrespectueux envers les administrateurs peut entraîner des sanctions.')
+    .setImage('https://i.imgur.com/RsgSUaa.png');
 var donateur = new Discord.MessageEmbed()
   .setColor('#303136')
   .setTitle('Avantages Booster')
-  .setDescription(`Chers membres de la communauté Kaori,
-
-Nous vous remercions d'être avec nous sur notre serveur Discord ! Si vous souhaitez nous soutenir dans notre travail, vous pouvez envisager de booster notre serveur. Les boosts sont un excellent moyen de soutenir notre communauté et de nous aider à grandir.
-
-Voici les avantages de booster notre serveur :
-
-**Niveau 1**
-- Boosteur de serveur de niveau 1
-- Accès aux emojis animés personnalisés
-- 128 kbps de qualité audio pour les salons vocaux
-- Un badge "Booster" dans votre profil
-- Accès au salon vocal "Booster"
-
-**Niveau 2**
-- Boosteur de serveur de niveau 2
-- 256 kbps de qualité audio pour les salons vocaux
-- Un badge "Booster" amélioré dans votre profil
-- Accès à un salon vocal exclusif aux Boosteurs de Niveau 2
-
-**Niveau 3**
-- Boosteur de serveur de niveau 3
-- 384 kbps de qualité audio pour les salons vocaux
-- Un badge "Booster" amélioré dans votre profil
-- Accès à un salon vocal exclusif aux Boosteurs de Niveau 3
-
-Nous espérons que vous considérerez de booster notre serveur. Merci pour votre soutien constant et nous espérons que vous continuerez à apprécier votre temps sur notre serveur.
-
-**Cordialement**,
-L'équipe Kaori`);
+  .setDescription('Merci beaucoup de soutenir notre serveur Discord en le boostant ! En tant que booster, vous bénéficiez de plusieurs avantages exclusifs :')
+  .addFields(
+    { name: 'Rôle exclusif', value: 'Un rôle personnalisé vous sera attribué pour vous remercier de votre soutien.' },
+    { name: 'Accès anticipé', value: 'Vous serez les premiers à avoir accès aux nouveautés et aux annonces du serveur Discord.' },
+    { name: 'Accès à un salon privé', value: 'Vous aurez accès à un salon vocal privé pour discuter avec les autres boosters.' },
+    { name: 'Mention spéciale', value: 'Votre nom sera mentionné dans un salon dédié aux boosters pour vous remercier publiquement de votre soutien.' },
+  );
 const guide = new Discord.MessageEmbed()
     .setColor('#303136')
     .setTitle('Guide de la communauté')
+    .setDescription('Nous sommes heureux de vous accueillir dans notre communauté ! Pour que tout le monde puisse profiter de cette expérience dans un environnement sûr et respectueux, veuillez suivre les règles ci-dessous.')
     .addFields(
-        { name: 'Utilisation des commandes', value: 'Pour utiliser les commandes sur le serveur, tapez "/" suivi de la commande souhaitée. Vous pouvez trouver la liste des commandes disponibles dans le canal <#945910640860622878>.' },
-        { name: 'Participer aux discussions', value: 'Pour participer aux discussions sur le serveur, cliquez sur un canal de discussion et tapez votre message. Respectez les autres membres de la communauté et ne publiez pas de contenu inapproprié.' },
-        { name: 'Utilisation des réactions', value: 'Vous pouvez utiliser les réactions pour exprimer vos sentiments en réponse à un message. Cliquez sur le bouton "+" à côté du message et choisissez la réaction souhaitée.' },
-        { name: 'Partager du contenu', value: 'Vous pouvez partager du contenu, comme des images ou des vidéos, en cliquant sur le bouton "Upload" et en sélectionnant le fichier que vous souhaitez partager. Ne partagez pas de contenu inapproprié ou offensant.' },
-        { name: 'Signaler un comportement inapproprié', value: 'Si vous rencontrez un comportement inapproprié sur le serveur, contactez un membre du personnel.' },
+        { name: 'Respectez les autres membres', value: 'Pas d’insultes, de harcèlement, de discours haineux ou de tout autre comportement irrespectueux. Respectez les opinions, les croyances et les différences des autres membres.' },
+        { name: 'Pas de contenu offensant', value: 'Aucun contenu pornographique, gore, violent, raciste, sexiste ou offensant n’est autorisé. Évitez également les blagues ou les memes qui pourraient offenser ou blesser les autres.' },
+        { name: 'Pas de spam', value: 'N’envoyez pas de messages inutiles ou répétitifs, ne faites pas de publicité sans autorisation et ne spammez pas les canaux avec des émoticônes ou des réactions.' },
+        { name: 'Respectez les modérateurs', value: 'Les modérateurs sont là pour assurer le bon fonctionnement de la communauté. Respectez leurs décisions et ne les harcelez pas.' },
+        { name: 'Utilisez les canaux appropriés', value: 'Utilisez les canaux prévus à cet effet pour éviter de polluer les discussions. Si vous ne savez pas où poster, demandez à un modérateur.' },
+        { name: 'Ne partagez pas d’informations personnelles', value: 'Pour votre sécurité, ne partagez pas d’informations personnelles (adresse, numéro de téléphone, etc.) sur la communauté. Si vous avez besoin d’aide, contactez un modérateur.' },
+        { name: 'Soyez vous-même', value: 'Soyez vous-même et amusez-vous ! La communauté est un endroit pour rencontrer de nouvelles personnes, discuter et partager vos centres d’intérêt.' },
     );
 
 // Vous pouvez maintenant envoyer cet embed dans un canal approprié.
@@ -56,18 +47,13 @@ var guide2 = new Discord.MessageEmbed()
   .setTitle('Règles importantes à respecter')
   .setDescription('Voici quelques règles importantes à respecter sur le serveur Discord Kaori :')
   .addFields(
-    { name: 'Respect', value: 'Le respect est primordial sur ce serveur. Tout comportement irrespectueux envers les autres membres ne sera pas toléré.' },
-    { name: 'Harcèlement', value: 'Le harcèlement est strictement interdit sur le serveur Discord Kaori. Cela inclut le harcèlement en ligne, le harcèlement envers les personnes LGBT et le rabaissement. Les personnes qui commettent de tels actes peuvent être expulsées du serveur.' },
-    { name: 'Discrimination', value: 'La discrimination envers les personnes en raison de leur origine ethnique, de leur orientation sexuelle, de leur genre, de leur religion, de leur handicap, etc. est interdite sur le serveur Discord Kaori. Les personnes qui commettent de tels actes peuvent être expulsées du serveur.' },
-    { name: 'Contenu inapproprié', value: 'Il est interdit de publier du contenu inapproprié sur le serveur Discord Kaori. Cela inclut les images ou les propos à caractère sexuel, violent ou discriminatoire. Les personnes qui publient de tels contenus peuvent être expulsées du serveur.' },
-    { name: 'Publicité', value: 'La publicité pour d\'autres serveurs Discord ou pour des produits est interdite sur le serveur Discord Kaori.' },
-    { name: 'Respect de la vie privée', value: 'Il est interdit de partager des informations personnelles d\'autres membres du serveur sans leur consentement.' },
-    { name: 'Spamming', value: 'Le spamming, c\'est-à-dire envoyer de nombreux messages inutiles ou répétitifs, est interdit sur le serveur Discord Kaori.' },
-    { name: 'Comportement adulte', value: 'Les membres doivent faire preuve de maturité et de responsabilité. Les comportements immatures ou puérils ne sont pas tolérés.' },
-    { name: 'Langage approprié', value: 'Il est important d\'utiliser un langage approprié et de ne pas utiliser de langage grossier ou offensant sur le serveur. Les personnes qui utilisent un langage inapproprié peuvent être averties ou expulsées du serveur.' },
-    { name: 'Incitation à la haine', value: 'Il est interdit de publier des messages qui incitent à la haine ou qui diffusent des idées racistes, sexistes, homophobes, etc.' },
-    { name: 'Fake news', value: 'La propagation de fausses informations ou de théories du complot est interdite sur le serveur Discord Kaori.' },
-    { name: 'Sécurité', value: 'Les membres doivent prendre des précautions pour protéger leur compte Discord et ne pas partager leur mot de passe avec d\'autres personnes.' },
+    { name: '1. Respectez les autres membres du serveur', value: 'Aucune forme de discrimination, de harcèlement ou d\'insulte ne sera tolérée sur le serveur. Soyez respectueux et courtois envers tous les membres.' },
+    { name: '2. Évitez les propos offensants ou inappropriés', value: 'Les propos à caractère raciste, sexiste, homophobe ou violent ne sont pas tolérés sur le serveur. Évitez également les propos vulgaires ou obscènes.' },
+    { name: '3. Pas de spam ou de publicité', value: 'Le spam, la publicité ou le partage de liens sans autorisation préalable sont interdits sur le serveur. Évitez également de partager des informations personnelles ou confidentielles.' },
+    { name: '4. Respectez les salons et les thématiques', value: 'Postez dans les salons appropriés et respectez les thématiques des salons. Évitez également de poster des messages hors-sujet ou de détourner des conversations.' },
+    { name: '5. Suivez les instructions des modérateurs', value: 'Les modérateurs ont le droit de donner des instructions et de prendre des mesures pour assurer le bon fonctionnement du serveur. Suivez leurs instructions et ne discutez pas de leurs décisions publiquement.' },
+    { name: '6. Pas de contenu illégal ou dangereux', value: 'Le partage de contenu illégal ou dangereux est strictement interdit sur le serveur. Évitez également de partager des liens vers des sites malveillants ou des fichiers infectés.' },
+    { name: '7. Respectez les règles de Discord', value: 'Le serveur Discord Kaori est hébergé sur la plateforme Discord. Respectez donc les règles et les conditions d\'utilisation de Discord, en plus des règles spécifiques au serveur Kaori.' },
     );
 
 client.on('ready', () => {
@@ -107,13 +93,16 @@ client.on('messageCreate',  message => {
 
       	if (command === "rules") {
  			const regle = new Discord.MessageEmbed()
-        .setImage("https://i.imgur.com/cEEVtMX.jpg")
-          .setColor("#303136")
-        	const descregle = new Discord.MessageEmbed()
-    .setTitle("Kaori Café - Communauté Francophone")
-    .setColor("#303136")
-    .setDescription("Bienvenue sur Kaori Café, une communauté francophone qui a pour objectif de rassembler des personnes sympathiques et bienveillantes. Nous sommes heureux de vous accueillir parmi nous et nous espérons que vous passerez un bon moment en notre compagnie.")
-    .setImage("https://i.imgur.com/RsgSUaa.png");
+  .setColor('#303136')
+  .setTitle('Bienvenue sur Kaori Café')
+  .setDescription('Kaori Café est une communauté francophone conviviale et accueillante, où les passionnés de culture japonaise peuvent se retrouver pour discuter, partager et découvrir ensemble.')
+  .addFields(
+    { name: 'Des salons pour tous les goûts', value: 'Notre serveur dispose d\'une variété de salons textuels et vocaux dédiés à différents sujets, tels que les anime, les jeux vidéo, la musique, la cuisine et plus encore.' },
+    { name: 'Une équipe modératrice attentive', value: 'Notre équipe de modération veille à ce que les membres respectent les règles et à maintenir une ambiance agréable et respectueuse pour tous.' },
+    { name: 'Des événements réguliers', value: 'Nous organisons régulièrement des événements tels que des soirées jeux, des visionnages d\'anime, des concours et plus encore, pour que nos membres puissent se divertir et se rencontrer.' },
+    { name: 'Un serveur boosté', value: 'En boostant notre serveur, vous bénéficierez d\'avantages tels qu\'un rôle exclusif, un accès à un salon privé, une augmentation de la qualité audio, et plus encore. N\'hésitez pas à nous soutenir !' }
+  )
+  .setImage('https://i.imgur.com/RsgSUaa.png');
 
        		message.channel.send({ embeds: [ regle, descregle ], components: [row]})
       	}
